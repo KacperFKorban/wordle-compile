@@ -19,3 +19,4 @@ scala3 -Xplugin:path_to_pluginjar.jar file.scala
 Default jar location after `sbt package`: `location_of_wordle-compile/target/scala-3.1.1/wordle-compile_3-0.1.0-SNAPSHOT.jar`
 
 Obviously inspired by [Wordle](https://www.nytimes.com/games/wordle/index.html).
+
