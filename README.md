@@ -20,3 +20,15 @@ Default jar location after `sbt package`: `location_of_wordle-compile/target/sca
 
 Obviously inspired by [Wordle](https://www.nytimes.com/games/wordle/index.html).
 
+### Running locally (sbt)
+
+```
+sbt publishLocal
+```
+
+Add the following lines to sbt config (build.sbt):
+```
+autoCompilerPlugins := true
+
+addCompilerPlugin("dev.korban" %% "wordle-compile" % "0.1.0-SNAPSHOT")
+```
