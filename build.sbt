@@ -1,5 +1,7 @@
 val scala3Version = "3.1.1"
 
+ThisBuild / organization := "dev.korban"
+
 lazy val root = project
   .in(file("."))
   .settings(
