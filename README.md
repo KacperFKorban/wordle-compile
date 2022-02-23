@@ -1,8 +1,12 @@
-![](./docs/wordle_compile_error_msg.png)
-
-## Scala 3 Wordle compile
-
-A Scala 3 compiler plugin, that requires you to solve a Wordle in order for the compilation to finish.
+<h1 align="center">
+  Scala 3 Wordle compile
+</h1>
+<p align="center">
+  <img src="./docs/wordle_compile_error_msg.png" />
+</p>
+<p align="center">
+  A Scala 3 compiler plugin, that requires you to solve a Wordle in order for the compilation to finish.
+</p>
 
 ### Demo
 
