@@ -1,3 +1,5 @@
+![](./docs/wordle_compile_error_msg.png)
+
 ## Scala 3 Wordle compile
 
 A Scala 3 compiler plugin, that requires you to solve a Wordle in order for the compilation to finish.
@@ -31,4 +33,9 @@ Add the following lines to sbt config (build.sbt):
 autoCompilerPlugins := true
 
 addCompilerPlugin("dev.korban" %% "wordle-compile" % "0.1.0-SNAPSHOT")
+```
+
+In order to be able to use it comfortably in sbt launch it using:
+```
+sbt -Dsbt.supershell=false
 ```
