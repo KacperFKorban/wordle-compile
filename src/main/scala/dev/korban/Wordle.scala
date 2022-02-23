@@ -1,4 +1,4 @@
-package dev.korban
+package dev.korban.wordle
 
 import scala.io.*
 import scala.io.StdIn.*
@@ -8,12 +8,12 @@ import scala.util.Random
 object Wordle {
   lazy val wordsFile = "words.txt"
   lazy val words =
-    Source.fromInputStream(Wordle.getClass.getClassLoader.getResourceAsStream(wordsFile)).getLines().toSeq
+    Source.fromInputStream(Wordle.getClass.getClassLoader.getResourceAsStream(wordsFile)).getLines.toSeq
 
-  def finishWordle(): Unit = {
+  def finishWordle(): Boolean = {
     given expected: String = words(Random.between(0, words.size))
 
-    if !doPlay() then finishWordle()
+    doPlay()
   }
 
   private def doPlay(i: Int = 1)(using expected: String): Boolean = {

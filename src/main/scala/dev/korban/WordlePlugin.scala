@@ -1,4 +1,4 @@
-package dev.korban
+package dev.korban.wordle
 
 import dotty.tools.dotc.ast.Trees.*
 import dotty.tools.dotc.ast.tpd
@@ -11,6 +11,7 @@ import dotty.tools.dotc.plugins.{PluginPhase, StandardPlugin}
 import dotty.tools.dotc.transform.{Pickler, Staging}
 import dotty.tools.dotc.report
 import dotty.tools.dotc.core.Contexts.FreshContext
+import dotty.tools.dotc.reporting.NoExplanation
 
 class WordlePlugin extends StandardPlugin:
   val name: String = "wordleCompile"
@@ -28,6 +29,7 @@ class WordlePhase extends PluginPhase:
   override val runsBefore = Set(Staging.name)
 
   override def initContext(ctx: FreshContext): Unit =
-    Wordle.finishWordle()
+    if !Wordle.finishWordle() then
+      report.error(NoExplanation("Come on man, you have to finish a wordle!"))(using ctx)
 
 end WordlePhase
