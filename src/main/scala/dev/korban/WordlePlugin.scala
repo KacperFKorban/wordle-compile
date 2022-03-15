@@ -15,7 +15,7 @@ import dotty.tools.dotc.reporting.NoExplanation
 
 class WordlePlugin extends StandardPlugin:
   val name: String = "wordleCompile"
-  override val description: String = "divide zero check"
+  override val description: String = "Requires the user to solve a wordle"
 
   def init(options: List[String]): List[PluginPhase] =
     (new WordlePhase) :: Nil

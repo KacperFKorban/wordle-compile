@@ -50,7 +50,7 @@ object Wordle {
           else
             blackCode
         color + gC + resetCode
-    }.fold("")(_ + _)
+    }.mkString
   }
 
 }
