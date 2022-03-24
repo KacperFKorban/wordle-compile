@@ -5,6 +5,8 @@ import scala.io.StdIn.*
 import scala.sys.process.*
 import scala.util.Random
 
+import cats.kernel.Monoid
+
 object Wordle {
   lazy val wordsFile = "words.txt"
   lazy val words =
@@ -12,6 +14,8 @@ object Wordle {
 
   def finishWordle(): Boolean = {
     given expected: String = words(Random.between(0, words.size))
+
+    val m: String = Monoid[String].empty
 
     doPlay()
   }

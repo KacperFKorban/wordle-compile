@@ -11,6 +11,7 @@ lazy val root = project
     scalaVersion := scala3Version,
 
     libraryDependencies ++= List(
-      "org.scala-lang" %% "scala3-compiler" % scala3Version
+      "org.scala-lang" %% "scala3-compiler" % scala3Version,
+      "org.typelevel" %% "cats-core" % "2.7.0"
     )
   )
